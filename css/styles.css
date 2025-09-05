@@ -306,52 +306,69 @@ main {
 =========================================== */
 .campus-card img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
     display: block;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .campus-title {
-    text-align: center;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .campus-title h2 {
-    font-size: 1.25rem;
-    color: #003366;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #002147;
+    margin-bottom: 0.5rem;
 }
 
 .campus-tag {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #28a745;
-    letter-spacing: 2px;
+    color: #28a745; /* Green color for CAMPUS */
+    letter-spacing: 1px;
 }
 
-.info-card h2 {
-    font-size: 1.8rem;
+/* Overriding the default .info-card for this page specifically */
+.about-page .info-card {
+    background-color: #6c757d; /* Medium Grey */
+    color: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.4); /* Subtle top highlight */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-page .info-card h2, 
+.about-page .info-card h3 {
+    color: #fff;
+    font-weight: 700;
+}
+
+.mission-vision h2 {
     text-align: center;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
 }
 
-.info-card h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
+.mission-vision h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.mission-vision p, 
+.mission-vision li {
+    font-size: 0.95rem;
+    color: #f0f2f5; /* Lighter text for readability */
+    margin-bottom: 1rem;
 }
 
 .mission-vision ol {
-    padding-left: 2rem;
-}
-
-.mission-vision p,
-.mission-vision li {
-    margin-bottom: 1rem;
-    color: #555;
+    padding-left: 20px;
 }
 
 .accreditations h3 {
-    text-align: left;
+    font-size: 1.2rem;
     margin-bottom: 1.5rem;
 }
 
@@ -359,16 +376,18 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
     gap: 1.5rem;
 }
 
 .logo-container img {
-    height: 80px;
-    width: auto;
+    height: 90px;
+    width: 90px;
     object-fit: contain;
+    background-color: #fff;
+    border-radius: 50%; /* Makes the logos circular */
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
-
 /* ===========================================
    6. ACADEMICS PAGE
 =========================================== */
