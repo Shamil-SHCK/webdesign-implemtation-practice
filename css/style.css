@@ -1,0 +1,212 @@
+/* ===========================================
+   GLOBAL STYLES & RESET
+=========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5; /* Light grey background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===========================================
+   HEADER & FOOTER
+=========================================== */
+header, footer {
+    background-color: #002147; /* Dark Navy Blue */
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    border-bottom-color: #fff;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: opacity 0.3s ease;
+}
+
+.social-media a:hover {
+    opacity: 0.8;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* ===========================================
+   MAIN CONTENT & LAYOUT
+=========================================== */
+main {
+    padding: 3rem 0;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start; /* Align items to the top */
+}
+
+.left-column {
+    flex: 1;
+}
+
+.right-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ===========================================
+   ABOUT PAGE SPECIFIC STYLES
+=========================================== */
+.campus-card img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.campus-title {
+    margin-top: 1.5rem;
+}
+
+.campus-title h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #002147;
+    margin-bottom: 0.5rem;
+}
+
+.campus-tag {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #28a745; /* Green color for CAMPUS */
+    letter-spacing: 1px;
+}
+
+.info-card {
+    background-color: #6c757d; /* Medium Grey */
+    color: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.4); /* Subtle top highlight */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.info-card h2, .info-card h3 {
+    color: #fff;
+    font-weight: 700;
+}
+
+.mission-vision h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.mission-vision h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.mission-vision p, .mission-vision li {
+    font-size: 0.95rem;
+    color: #f0f2f5; /* Lighter text for readability */
+    margin-bottom: 1rem;
+}
+
+.mission-vision ol {
+    padding-left: 20px;
+}
+
+.accreditations h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo-container img {
+    height: 90px;
+    width: 90px;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 50%; /* Makes the logos circular */
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN
+=========================================== */
+@media (max-width: 992px) {
+    .main-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
