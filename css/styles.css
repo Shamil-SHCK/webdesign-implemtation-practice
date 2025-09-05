@@ -1,0 +1,1325 @@
+/* --- Basic Reset and Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9; /* Lighter, softer background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Header and Navigation --- */
+header {
+    background-color: #003366; /* A slightly richer navy blue */
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 3px solid #f0ad4e; /* Accent color */
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-media {
+    margin-bottom: 0.5rem;
+}
+
+.social-media a {
+    color: #fff;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #f0ad4e; /* Accent color on hover */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --- Main Content Area --- */
+main {
+    padding: 3rem 0;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+/* --- Left Column (Campus Image) --- */
+.left-column {
+    flex: 1;
+}
+
+.campus-card img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.campus-title {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.campus-title h2 {
+    font-size: 1.25rem;
+    color: #003366;
+}
+
+.campus-tag {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #28a745; /* Vibrant green */
+    letter-spacing: 2px;
+}
+
+/* --- Right Column (Info Cards) --- */
+.right-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-card {
+    background-color: #ffffff; /* Clean white cards */
+    padding: 2rem;
+    border-radius: 15px; /* Slightly softer corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.info-card h2, .info-card h3 {
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+.info-card h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.75rem;
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.mission-vision ol {
+    padding-left: 2rem;
+}
+
+.mission-vision p, .mission-vision li {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* --- Accreditations Section --- */
+.accreditations h3 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.logo-container img {
+    height: 80px; /* Uniform height */
+    width: auto;
+    object-fit: contain;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #003366;
+    color: #ddd;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .right-column {
+        order: -1; /* Show text content before image on mobile */
+    }
+    
+    .logo-container img {
+        height: 60px; /* Slightly smaller logos on mobile */
+    }
+}
+/* --- Academics Page Specific Styles ---
+   (Add this to your existing style.css)
+------------------------------------------- */
+
+/* --- Left Column --- */
+.academics-left-image {
+    width: 100%;
+    height: 250px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.course-selector {
+    background-color: #4a4a4a; /* Modern dark grey */
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.course-selector h2 {
+    color: #fff;
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #f0ad4e; /* Accent color from header */
+    display: inline-block;
+}
+
+.course-grid {
+    display: flex;
+    gap: 1rem;
+}
+
+.course-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.course-btn, .year-btn {
+    border: none;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.course-btn:hover, .year-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.course-btn {
+    background-color: #ffc107; /* Vibrant yellow */
+    color: #333;
+}
+
+.year-options {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.year-btn {
+    background-color: #004a99; /* A slightly brighter blue */
+    color: #fff;
+}
+
+/* --- Right Column --- */
+.semester-selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e9ecef; /* Light grey */
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.semester-selector span {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.semester-btn {
+    background-color: #6c757d; /* Darker grey for button */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.semester-btn:hover {
+    background-color: #5a6268;
+}
+
+.download-card {
+    background-color: #003366; /* Matching the header blue */
+    color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem; /* Replaces the gap from the previous page */
+}
+
+.download-card:last-child {
+    margin-bottom: 0;
+}
+
+.download-card h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.download-btn {
+    background-color: #f0ad4e; /* Bright orange/gold accent */
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.8rem 2.5rem;
+    border-radius: 50px; /* Pill shape */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+    background-color: #ffc107;
+}
+
+/* --- Responsive adjustments for Academics Page --- */
+@media (max-width: 768px) {
+    .right-column {
+        order: 0; /* Reset the order for this page if needed */
+    }
+    .course-grid {
+        flex-direction: column;
+    }
+}
+/* --- Faculty Page Specific Styles ---
+   (Add this to your existing style.css)
+------------------------------------------- */
+
+/* Column adjustments for this specific page */
+.faculty-column {
+    flex: 3; /* Give more space to the faculty list */
+}
+
+.research-column {
+    flex: 1; /* Less space for the sidebar */
+}
+
+/* --- Left Column: Faculty Table --- */
+.faculty-table-container {
+    background-color: #003366; /* Rich navy blue */
+    color: #fff;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Adds horizontal scroll on small screens */
+}
+
+.faculty-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px; /* Prevents content from squishing too much */
+}
+
+.faculty-table-container th,
+.faculty-table-container td {
+    padding: 1rem;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.faculty-table-container thead {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.faculty-table-container th {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.faculty-table-container tbody tr:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.faculty-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-pic {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.faculty-info span {
+    font-weight: 600;
+}
+
+/* --- Right Column: Research Interests --- */
+.research-interests-card {
+    background-color: #4a4a4a; /* Modern dark grey */
+    color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.research-interests-card h2 {
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #f0ad4e; /* Accent color */
+    display: inline-block;
+}
+
+.research-interests-card ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0;
+}
+
+.research-interests-card li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    position: relative;
+    font-size: 1.05rem;
+}
+
+/* Custom bullet points for a cleaner look */
+.research-interests-card li::before {
+    content: '●'; /* Unicode for a solid circle */
+    color: #f0ad4e; /* Accent color */
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* --- Responsive adjustments for Faculty Page --- */
+@media (max-width: 992px) {
+    .main-container {
+        flex-direction: column;
+    }
+}
+/* --- Placement Page Specific Styles ---
+   (Add this to your existing style.css)
+------------------------------------------- */
+
+/* --- Introduction Section --- */
+.intro-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.intro-image {
+    flex: 1;
+}
+
+.intro-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+    flex: 1.2; /* Give slightly more space to the text */
+}
+
+.intro-text p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* --- Placement Records Section --- */
+.records-section {
+    background-color: #e9ecef; /* Light grey background for the whole section */
+    padding: 3rem 0;
+}
+
+.records-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.records-container h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #003366; /* Main theme color */
+    display: inline-block;
+}
+
+.records-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.stats-cards {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+    color: #444;
+}
+
+.stat-card p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-highlight-green, .stat-highlight-red {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.stat-highlight-green {
+    background-color: #28a745; /* Vibrant green */
+}
+
+.stat-highlight-red {
+    background-color: #dc3545; /* Cautionary red */
+}
+
+.opportunity-card {
+    text-align: center;
+    border-style: dashed;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.opportunity-card a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: 600;
+}
+.opportunity-card:hover {
+    background-color: #f8f9fa;
+    border-color: #003366;
+}
+
+/* --- Bar Chart --- */
+.chart-container {
+    flex-basis: 300px;
+    height: 200px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+.bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    flex: 1;
+    justify-content: flex-end; /* Aligns bar to bottom, text follows */
+}
+
+.bar {
+    background-color: #343a40; /* Dark grey/black for bars */
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    transition: height 0.5s ease-out;
+}
+
+.year {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+}
+
+/* --- Responsive adjustments for Placement Page --- */
+@media (max-width: 992px) {
+    .intro-section {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .records-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .chart-container {
+       flex-basis: auto; /* Allow chart to take full width */
+    }
+}
+/* --- Notice Page Specific Styles ---
+   (Add this to your existing style.css)
+------------------------------------------- */
+
+.main-container-notice {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* --- Filter Button Section --- */
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.filter-btn {
+    background-color: #003366; /* Main theme color */
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #004a99; /* Slightly brighter blue */
+    transform: translateY(-2px);
+}
+
+/* --- Main Content Layout --- */
+.content-wrapper {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.notice-content {
+    flex: 2.5; /* More space for the main grid */
+}
+
+.sidebar {
+    flex: 1;
+}
+
+.notice-content h2, .sidebar h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #f0ad4e; /* Accent color */
+    display: inline-block;
+}
+
+/* --- Notice Grid --- */
+.notice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.notice-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 200px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.notice-card:hover {
+    transform: scale(1.03);
+}
+
+.notice-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.5rem;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.card-content h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+}
+
+.download-btn-small {
+    background-color: #f0ad4e;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.download-btn-small:hover {
+    background-color: #ffc107;
+}
+
+/* --- Sidebar --- */
+.sidebar-widget {
+    margin-bottom: 2.5rem;
+}
+
+.deadline-box {
+    background-color: #4a4a4a;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.deadline-box ol {
+    padding-left: 1.5rem;
+}
+
+.deadline-box li {
+    margin-bottom: 0.75rem;
+}
+
+.featured-event-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 0.75rem;
+}
+
+.caption {
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+}
+
+/* --- Responsive adjustments for Notice Page --- */
+@media (max-width: 992px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .notice-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* --- Contact Page Specific Styles ---
+   (Add this to your existing style.css)
+------------------------------------------- */
+
+.contact-main {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px); /* Adjust based on header/footer height */
+}
+
+.contact-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #f4f4f9; /* Light grey background container */
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 2rem;
+}
+
+.contact-card {
+    background-color: #ffffff;
+    flex: 1;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid #003366; /* Accent border */
+}
+
+.contact-section {
+    margin-bottom: 2.5rem;
+}
+
+.contact-section:last-child {
+    margin-bottom: 0;
+}
+
+.contact-section h3 {
+    font-size: 1.4rem;
+    color: #003366; /* Main theme color */
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.icon-prefix {
+    color: #f0ad4e; /* Accent color */
+}
+
+.contact-section p, .contact-link {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.contact-link {
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #0056b3;
+}
+
+.contact-social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.contact-social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    color: #003366;
+    background-color: #f4f4f9;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-social-icons a:hover {
+    background-color: #003366;
+    color: #fff;
+}
+
+/* --- Responsive adjustments for Contact Page --- */
+@media (max-width: 768px) {
+    .contact-main {
+        padding: 2rem 1rem;
+    }
+    .contact-wrapper {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    .contact-card {
+        padding: 2rem;
+    }
+}
+/* --- Achievements Page Specific Styles ---
+   (Add this to your existing style.css)
+------------------------------------------- */
+
+.achievements-main {
+    padding: 3rem 2rem;
+    background-color: #f4f4f9; /* Light grey background */
+}
+
+.achievements-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: stretch; /* Make cards equal height */
+}
+
+.achievement-card {
+    flex: 1;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Ensures child elements respect border-radius */
+}
+
+/* Card Colors */
+.awards-card {
+    background-color: #003366; /* Main theme blue */
+}
+.publications-card, .projects-card {
+    background-color: #008080; /* Modern Teal */
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.card-header i {
+    font-size: 2rem;
+    color: #f0ad4e; /* Accent color */
+}
+
+.card-header h2 {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.card-body {
+    padding: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    flex-grow: 1; /* Allows body to fill remaining space */
+}
+
+/* Awards Card Specifics */
+.awards-list {
+    list-style: none;
+    padding: 0;
+}
+
+.awards-list li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.awards-list li i {
+    font-size: 1.5rem;
+    padding-top: 5px;
+    color: #f0ad4e; /* Accent color */
+}
+
+/* Publications Card Specifics */
+.publication-body {
+    text-align: center;
+}
+
+.publication-body h4 {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.publication-body img {
+    max-width: 200px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Projects Card Specifics */
+.projects-list {
+    padding-left: 1.5rem;
+}
+
+.projects-list li {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* --- Responsive adjustments for Achievements Page --- */
+@media (max-width: 992px) {
+    .achievements-container {
+        flex-direction: column;
+    }
+}
+/* --- Basic Reset and Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff; /* Clean white background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Header and Navigation --- */
+header {
+    background-color: #003366; /* Rich navy blue */
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 4px solid #f0ad4e; /* Accent color */
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-media {
+    margin-bottom: 0.5rem;
+}
+
+.social-media a {
+    color: #fff;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #f0ad4e;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #003366;
+    color: #ddd;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+/* --- HOME PAGE SPECIFIC STYLES --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: #fff;
+}
+.logo i {
+    font-size: 2.5rem;
+    color: #f0ad4e;
+}
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+.logo-text span {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.logo-text strong {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 6rem 2rem;
+    background-color: #fff;
+}
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+.tagline {
+    font-size: 1.5rem;
+    color: #555;
+    font-weight: 400;
+}
+
+.quick-links-section {
+    max-width: 1200px;
+    margin: -3rem auto 3rem auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    position: relative; /* To appear above gallery */
+    z-index: 10;
+}
+
+.quick-link-card {
+    flex: 1;
+    min-width: 200px;
+    background-color: #212529; /* Modern dark grey */
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.quick-link-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.quick-link-card i {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+    color: #f0ad4e;
+}
+
+.quick-link-card span {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.gallery-section {
+    background-color: #003366; /* Main theme color */
+    padding: 5rem 0;
+    color: #fff;
+}
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.gallery-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    border-bottom: 3px solid #f0ad4e;
+    padding-bottom: 0.5rem;
+}
+.view-all-btn {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.view-all-btn:hover {
+    background-color: #fff;
+    color: #003366;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+
+/* --- GENERAL CARD & LAYOUT STYLES (For other pages) --- */
+/* (This section contains styles from all previous pages) */
+
+.main-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 2rem;
+}
+.left-column { flex: 1; }
+.right-column { flex: 2; }
+.info-card { background-color: #ffffff; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+.campus-card img { width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.campus-title { text-align: center; margin-top: 1rem; }
+.campus-title h2 { font-size: 1.25rem; color: #003366; }
+.campus-tag { font-size: 1.5rem; font-weight: 700; color: #28a745; }
+.accreditations .logo-container { display:flex; justify-content: space-around; align-items: center; gap: 1.5rem; }
+.accreditations .logo-container img { height: 80px; }
+.download-card { background-color: #003366; color: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 2rem; }
+.download-btn { background-color: #f0ad4e; color: #333; text-decoration: none; font-size: 1.1rem; font-weight: 600; padding: 0.8rem 2.5rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.75rem; transition: transform 0.2s ease, background-color 0.2s ease; }
+.download-btn:hover { transform: scale(1.05); }
+.faculty-table-container { background-color: #003366; color: #fff; border-radius: 15px; padding: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow-x: auto; }
+.faculty-table-container table { width: 100%; border-collapse: collapse; }
+.faculty-table-container td, .faculty-table-container th { padding: 1rem; text-align: left; vertical-align: middle; }
+.profile-pic { width: 65px; height: 65px; border-radius: 50%; border: 3px solid #fff; object-fit: cover; }
+.intro-section { max-width: 1200px; margin: 3rem auto; padding: 0 2rem; display: flex; align-items: center; gap: 3rem; }
+.intro-image img { width: 100%; border-radius: 15px; }
+.records-section { background-color: #e9ecef; padding: 3rem 0; }
+.records-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.stat-card { background-color: #fff; padding: 1.5rem; border-radius: 10px; border: 1px solid #ddd; }
+.notice-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.notice-card { position: relative; border-radius: 10px; overflow: hidden; min-height: 200px; }
+.contact-wrapper { max-width: 1000px; background-color: #f4f4f9; padding: 2rem; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); display: flex; gap: 2rem; margin: 4rem auto; }
+.contact-card { background-color: #ffffff; flex: 1; padding: 2.5rem; border-radius: 15px; border-top: 5px solid #003366; }
+.achievements-main { padding: 3rem 2rem; background-color: #f4f4f9; }
+.achievements-container { max-width: 1200px; margin: 0 auto; display: flex; gap: 2rem; }
+.achievement-card { flex: 1; color: #fff; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+.awards-card { background-color: #003366; }
+.publications-card, .projects-card { background-color: #008080; }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+    .main-container, .intro-section, .achievements-container, .contact-wrapper, .records-content {
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .header-container { flex-direction: column; gap: 1rem; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .tagline { font-size: 1.2rem; }
+    .notice-grid { grid-template-columns: 1fr; }
+}
